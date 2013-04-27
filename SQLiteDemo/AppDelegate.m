@@ -24,15 +24,15 @@
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSError *error;
 	NSString *dbPath = [self getDBPath];
-	BOOL success = [fileManager fileExistsAtPath:dbPath];
     
+    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"mydatabase.sqlite"];
+    
+    NSLog(@"defaultDBPath: %@", defaultDBPath);
+    NSLog(@"dbDocumentsPath: %@", dbPath);
+    
+	BOOL success = [fileManager fileExistsAtPath:dbPath];
 	if(!success) {
-        
-		NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"mydatabase.sqlite"];
-        
-        NSLog(@"defaultDBPath: %@", defaultDBPath);
-        NSLog(@"dbDocumentsPath: %@", dbPath);
-        
+
 		success = [fileManager copyItemAtPath:defaultDBPath toPath:dbPath error:&error];
         
 		if (!success)

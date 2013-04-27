@@ -12,10 +12,13 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="Hz0-bb-obA">
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" id="Hz0-bb-obA">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Z38-Aw-nHm" id="ED7-zK-awY"/>
+                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="pJA-Gc-uQe" detailTextLabel="6Jo-nD-JZG" style="IBUITableViewCellStyleSubtitle" id="giu-r8-llJ">
@@ -42,6 +45,9 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Main" id="8d9-Lw-yBl"/>
+                    <connections>
+                        <outlet property="tableSearchBar" destination="Hz0-bb-obA" id="tN6-SG-Cuh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4c-bZ-JUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

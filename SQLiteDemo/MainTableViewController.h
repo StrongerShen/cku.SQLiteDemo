@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainTableViewController : UITableViewController
+@interface MainTableViewController : UITableViewController <UISearchBarDelegate>
 {
     UIBarButtonItem *addButton;
     NSMutableArray *custs;
 }
+@property (strong, nonatomic) IBOutlet UISearchBar *tableSearchBar;
 
 @end
