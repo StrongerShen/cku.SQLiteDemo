@@ -22,9 +22,9 @@
 		669335EE172B6EAB00933735 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 669335E5172B6EAB00933735 /* FMDatabaseAdditions.m */; };
 		669335EF172B6EAB00933735 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 669335E7172B6EAB00933735 /* FMDatabasePool.m */; };
 		669335F0172B6EAB00933735 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 669335E9172B6EAB00933735 /* FMDatabaseQueue.m */; };
-		669335F1172B6EAB00933735 /* fmdb.m in Sources */ = {isa = PBXBuildFile; fileRef = 669335EA172B6EAB00933735 /* fmdb.m */; };
 		669335F2172B6EAB00933735 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 669335EC172B6EAB00933735 /* FMResultSet.m */; };
 		6693360F172B73BA00933735 /* mydatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 669335F3172B73BA00933735 /* mydatabase.sqlite */; };
+		66933625172B7C5D00933735 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66933624172B7C5D00933735 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,10 +52,10 @@
 		669335E7172B6EAB00933735 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
 		669335E8172B6EAB00933735 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
 		669335E9172B6EAB00933735 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		669335EA172B6EAB00933735 /* fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fmdb.m; sourceTree = "<group>"; };
 		669335EB172B6EAB00933735 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		669335EC172B6EAB00933735 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		669335F3172B73BA00933735 /* mydatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mydatabase.sqlite; sourceTree = "<group>"; };
+		66933624172B7C5D00933735 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66933625172B7C5D00933735 /* libsqlite3.dylib in Frameworks */,
 				669335AE172B6D8B00933735 /* UIKit.framework in Frameworks */,
 				669335B0172B6D8B00933735 /* Foundation.framework in Frameworks */,
 				669335B2172B6D8B00933735 /* CoreGraphics.framework in Frameworks */,
@@ -93,6 +94,7 @@
 		669335AC172B6D8B00933735 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66933624172B7C5D00933735 /* libsqlite3.dylib */,
 				669335AD172B6D8B00933735 /* UIKit.framework */,
 				669335AF172B6D8B00933735 /* Foundation.framework */,
 				669335B1172B6D8B00933735 /* CoreGraphics.framework */,
@@ -139,7 +141,6 @@
 				669335E7172B6EAB00933735 /* FMDatabasePool.m */,
 				669335E8172B6EAB00933735 /* FMDatabaseQueue.h */,
 				669335E9172B6EAB00933735 /* FMDatabaseQueue.m */,
-				669335EA172B6EAB00933735 /* fmdb.m */,
 				669335EB172B6EAB00933735 /* FMResultSet.h */,
 				669335EC172B6EAB00933735 /* FMResultSet.m */,
 			);
@@ -220,7 +221,6 @@
 				669335EE172B6EAB00933735 /* FMDatabaseAdditions.m in Sources */,
 				669335EF172B6EAB00933735 /* FMDatabasePool.m in Sources */,
 				669335F0172B6EAB00933735 /* FMDatabaseQueue.m in Sources */,
-				669335F1172B6EAB00933735 /* fmdb.m in Sources */,
 				669335F2172B6EAB00933735 /* FMResultSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
