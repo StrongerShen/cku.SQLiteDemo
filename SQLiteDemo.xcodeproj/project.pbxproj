@@ -25,6 +25,8 @@
 		669335F2172B6EAB00933735 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 669335EC172B6EAB00933735 /* FMResultSet.m */; };
 		6693360F172B73BA00933735 /* mydatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 669335F3172B73BA00933735 /* mydatabase.sqlite */; };
 		66933625172B7C5D00933735 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66933624172B7C5D00933735 /* libsqlite3.dylib */; };
+		66933628172B96B100933735 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66933627172B96B100933735 /* MainTableViewController.m */; };
+		6693362B172BA05400933735 /* myDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 6693362A172BA05400933735 /* myDB.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,10 @@
 		669335EC172B6EAB00933735 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		669335F3172B73BA00933735 /* mydatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mydatabase.sqlite; sourceTree = "<group>"; };
 		66933624172B7C5D00933735 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		66933626172B96B100933735 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		66933627172B96B100933735 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		66933629172BA05400933735 /* myDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myDB.h; sourceTree = "<group>"; };
+		6693362A172BA05400933735 /* myDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myDB.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +112,13 @@
 			isa = PBXGroup;
 			children = (
 				669335F3172B73BA00933735 /* mydatabase.sqlite */,
+				66933629172BA05400933735 /* myDB.h */,
+				6693362A172BA05400933735 /* myDB.m */,
 				669335BC172B6D8B00933735 /* AppDelegate.h */,
 				669335BD172B6D8B00933735 /* AppDelegate.m */,
 				669335C5172B6D8B00933735 /* MainStoryboard.storyboard */,
+				66933626172B96B100933735 /* MainTableViewController.h */,
+				66933627172B96B100933735 /* MainTableViewController.m */,
 				669335C8172B6D8B00933735 /* ViewController.h */,
 				669335C9172B6D8B00933735 /* ViewController.m */,
 				669335B4172B6D8B00933735 /* Supporting Files */,
@@ -222,6 +232,8 @@
 				669335EF172B6EAB00933735 /* FMDatabasePool.m in Sources */,
 				669335F0172B6EAB00933735 /* FMDatabaseQueue.m in Sources */,
 				669335F2172B6EAB00933735 /* FMResultSet.m in Sources */,
+				66933628172B96B100933735 /* MainTableViewController.m in Sources */,
+				6693362B172BA05400933735 /* myDB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
