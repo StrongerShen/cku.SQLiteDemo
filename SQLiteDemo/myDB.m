@@ -104,6 +104,7 @@ myDB *sharedInstance;
 
 - (void)insertCustNo:(NSString *)custno andCustName:(NSString *)custname andCustTel:(NSString *)custtel andCustEmail:(NSString *)custemail andCustAddr:(NSString *)custaddr
 {
+    // 需要加上判斷，如果 custno, custname 沒有輸入，不可以儲存
     if (![_db executeUpdate:@"INSERT INTO cust (cust_no, cust_name, cust_tel, cust_addr, cust_email) VALUES (?,?,?,?,?)",
           custno, custname, custtel, custaddr, custemail ])
     {

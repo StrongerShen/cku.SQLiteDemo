@@ -20,7 +20,7 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"CustomerAdd"];
-    
+    vc.flag = 1;
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -45,7 +45,15 @@
                                                               action:@selector(addNewCust:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
+//    custs = [[myDB sharedInstance] queryCust];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
     custs = [[myDB sharedInstance] queryCust];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -120,6 +128,30 @@
 */
 
 #pragma mark - Table view delegate
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"CustomerAdd"];
+    
+    vc.flag = 2;
+    vc.dictCust = [custs objectAtIndex:indexPath.row];
+
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
